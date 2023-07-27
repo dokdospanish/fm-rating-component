@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('./assets/fonts/static/Overpass-Medium.ttf');
+  font-weight: 400;
+}
+
+@layer base {
+
+  a {
+    @apply underline text-primary-orange
+  }
+
+  form,
+  dialog {
+    background: radial-gradient(circle at top, hsl(213, 19%, 18%), hsla(213, 19%, 18%, 50%));
+    background-color: black;
+    transition: all 0.2s ease;
+  }
+
+  #invalid-tooltip {
+    background: linear-gradient(to bottom, hsl(213, 19%, 18%), hsla(213, 19%, 18%, 50%));
+    background-color: black;
+  }
+}

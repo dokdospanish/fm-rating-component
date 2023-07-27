@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive Rating Component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/rating/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/rating/tailwind-out.css">
+  <script src="/rating/main.js" defer></script>
+</head>
+<body class="h-[100vh] font-custom bg-very-dark-blue text-medium-grey flex flex-col justify-between items-center">
+
+
+  
+  <main class="my-auto flex flex-col justify-between items-center">
+
+    <form class="w-96 p-8 rounded-3xl flex flex-col gap-4 shadow-lg shadow-gray-800" novalidate>
+      <div class="bg-medium-grey/20 w-12 rounded-full aspect-square grid place-items-center select-none">
+        <img src="/rating/assets/images/icon-star.svg" alt="">
+      </div>
+      
+      <h2 class="text-white text-2xl">How did we do?</h2>
+      <p class="text-sm">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+  
+      <fieldset class="relative flex justify-between select-none"
+        role="radiogroup" aria-required="true">
+        
+        <legend class="sr-only">Rate us</legend>
+
+        <span id="invalid-tooltip" 
+          aria-live="polite"
+          class="
+          sr-only
+          absolute
+          left-1/2 -translate-x-1/2 -translate-y-20
+        p-3 rounded-2xl
+          border-4 border-orange-500
+          w-2/3 text-center text-orange-5o00 text-sm
+
+
+
+          after:w-0 
+          after:h-0
+
+          after:border-l-[20px]
+          after:border-l-transparent
+          after:border-r-[20px]
+          after:border-r-transparent
+          
+          after:border-t-[20px]
+          after:border-orange-500
+          after:absolute
+          after:left-1/2
+          after:-translate-x-1/2
+          after:translate-y-8
+
+          after:duration-200
+          after:origin-top-center
+          after:scale-0
+
+          duration-200
+          origin-bottom
+          scale-0
+          
+          
+          ">
+          Please choose a rating between 1 and 5.
+        </span>
+          
+        <label class="sr-only" for="rate-1">1</label>
+        <input
+          required
+          id="rate-1" value="1"
+          class="
+          appearance-none
+          w-[3rem] aspect-square rounded-full bg-medium-grey/20
+          grid place-items-center
+
+          transition-colors
+          hover:cursor-pointer
+          hover:bg-light-grey
+          hover:text-white
+          checked:bg-primary-orange
+          checked:text-white
+          checked:hover:bg-primary-orange
+          checked:hover:text-white
+          
+          after:content-[attr(value)]
+
+        " type="radio" name="rating">
+
+        <label class="sr-only" for="rate-2">2</label>
+        <input id="rate-2" value="2" class="
+          appearance-none
+          w-[3rem] aspect-square rounded-full bg-medium-grey/20
+          grid place-items-center
+
+          transition-colors
+          hover:cursor-pointer
+          hover:bg-light-grey
+          hover:text-white
+          checked:bg-primary-orange
+          checked:text-white
+          checked:hover:bg-primary-orange
+          checked:hover:text-white
+          
+          after:content-[attr(value)]
+        " type="radio" name="rating">
+
+        <label class="sr-only" for="rate-3">3</label>
+        <input id="rate-3" value="3" class="
+          appearance-none
+          w-[3rem] aspect-square rounded-full bg-medium-grey/20
+          grid place-items-center
+
+          transition-colors
+          hover:cursor-pointer
+          hover:bg-light-grey
+          hover:text-white
+          checked:bg-primary-orange
+          checked:text-white
+          checked:hover:bg-primary-orange
+          checked:hover:text-white
+          
+          after:content-[attr(value)]
+        " type="radio" name="rating">
+
+        <label class="sr-only" for="rate-4">4</label>
+        <input id="rate-4" value="4" class="
+          appearance-none
+          w-[3rem] aspect-square rounded-full bg-medium-grey/20
+          grid place-items-center
+
+          transition-colors
+          hover:cursor-pointer
+          hover:bg-light-grey
+          hover:text-white
+          checked:bg-primary-orange
+          checked:text-white
+          checked:hover:bg-primary-orange
+          checked:hover:text-white
+          
+          after:content-[attr(value)]
+        " type="radio" name="rating">
+
+        <label class="sr-only" for="rate-5">5</label>
+        <input id="rate-5" value="5" class="
+          appearance-none
+          w-[3rem] aspect-square rounded-full bg-medium-grey/20
+          grid place-items-center
+
+          transition-colors
+          hover:cursor-pointer
+          hover:bg-light-grey
+          hover:text-white
+          checked:bg-primary-orange
+          checked:text-white
+          checked:hover:bg-primary-orange
+          checked:hover:text-white
+          
+          after:content-[attr(value)]
+        " type="radio" name="rating">
+  
+      </fieldset>  
+
+      <button type="submit" class="p-3 rounded-full bg-primary-orange text-white hover:bg-white hover:text-primary-orange select-none
+      transition-colors
+      ">SUBMIT</button>
+
+    </form>
+
+    <dialog class="w-96 p-8 rounded-3xl flex flex-col gap-4 items-center scale-0 invisible">
+      <img class="w-40" src="/rating/assets/images/illustration-thank-you.svg" alt="Thank you!">
+      <div class="h-[2rem] px-4 grid place-items-center bg-medium-grey/20 text-primary-orange rounded-full">
+        <span tabindex="0" class="leading-[2.2rem]"><!-- You selected 3 out of 5 --></span>
+      </div>
+      <h2 class="text-white text-2xl">Thank you!</h2>
+      <p class="text-medium-grey text-sm text-center">
+        We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+      </p>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <p class="p-4 text-xs text-white">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/dokdospanish/">Dokdo Spanish</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

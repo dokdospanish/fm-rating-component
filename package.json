@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss -i ./tailwind-in.css -o ./public/rating/tailwind-out.css",
+    "watch": "npx tailwindcss -i ./tailwind-in.css -o ./public/rating/tailwind-out.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
