@@ -1,0 +1,5 @@
+[dev]
+  publish = "public"
+
+[build]
+  publish = "public"
